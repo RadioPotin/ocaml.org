@@ -138,7 +138,6 @@ Which Git should opam use?
 [1/2/3]
 ```
 
-
 Opam's default behaviour when initialising is to install a fresh `switch` as
 well as an ocaml compiler of version `> 4.05`.
 
@@ -187,7 +186,7 @@ a compiler backend but know that you can very well choose an alternative to it
 instead, like `msvc` with the following command:
 
 ```shell-session
-
+$ opam install ocaml-env-msvc64
 ```
 
 Once your environment has been updated, you will have a fully functional OCaml
