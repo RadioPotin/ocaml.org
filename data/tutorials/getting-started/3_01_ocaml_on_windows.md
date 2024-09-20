@@ -186,7 +186,7 @@ a compiler backend but know that you can very well choose an alternative to it
 instead, like `msvc` with the following command:
 
 ```shell-session
-$ opam install ocaml-env-msvc64
+$ opam install system-msvc
 ```
 
 Once your environment has been updated, you will have a fully functional OCaml
@@ -202,8 +202,8 @@ The OCaml toplevel, version 5.2.0
 OCaml version 5.2.0
 Enter #help;; for help.
 
-# print_endline "Hello OCamleer!!";;
-Hello OCamleer!!
+# print_endline "Hello OCamleers!!";;
+Hello OCamleers!!
 - : unit = ()
 #
 ```
