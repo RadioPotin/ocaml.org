@@ -6,12 +6,12 @@ description: >
 category: "Resources"
 ---
 
-## opam 2.2
+## opam
 
-Opam now features a fully Windows compatible installation process that we
+Opam now features a fully native Windows compatible installation process that we
 recommend new users to follow below.
 
-In order to have access to OCaml on a PC, users have to use opam so that's our
+In order to have access to OCaml on a Windows PC, users have to use opam so that's our
 first step.
 
 Windows Developers out there will already be familiar with `winget` which is
@@ -70,7 +70,7 @@ advice our users to go get themselves their favourite hot beverage while it
 runs.
 
 ```shell-session
->opam init
+> opam init
 No configuration file found, using built-in defaults.
 
 <><> Windows Developer Mode <><><><><><><><><><><><><><><><><><><><><><><><>  🐫
@@ -117,12 +117,12 @@ whenever you change you current 'opam switch' or start a new terminal session. A
 different shell? [y/n] n
 ```
 
-One detail to address about having a fully functional opam instance is
+One detail to address about having a fully functional opam installation is
 related to Git.
 
 On Windows, there are many ways to have a functioning Git installation. Opam will
 look for a compatible Git and, if none is found, it will prompt you with a set of
-options that allow for a smooth installation. 
+options to install one. 
 
 ```shell-session
 <><> Git ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>  🐫
@@ -181,12 +181,12 @@ Done.
 # Run for /f "tokens=*" %i in ('opam env --switch=default') do @%i to update the current shell environment
 ```
 
-You can see that in this specific run of the command, opam chose mingw64 as
+You can see that in this specific run of the command, opam chose `mingw64` as
 a compiler backend but know that you can very well choose an alternative to it
 instead, like `msvc` with the following command:
 
 ```shell-session
-$ opam install ocaml-env-msvc64
+$ opam install system-msvc
 ```
 
 Once your environment has been updated, you will have a fully functional OCaml
@@ -202,8 +202,8 @@ The OCaml toplevel, version 5.2.0
 OCaml version 5.2.0
 Enter #help;; for help.
 
-# print_endline "Hello OCamleer!!";;
-Hello OCamleer!!
+# print_endline "Hello OCamleers!!";;
+Hello OCamleers!!
 - : unit = ()
 #
 ```
@@ -285,6 +285,8 @@ easier way to get a working Windows environment on your machine.
 ## Editor Support for OCaml on Windows
 
 ### Visual Studio Code on Windows
+
+**If you use opam installation**, you will need to add opam switch prefix on your path that runs VSCode.
 
 **If you use the recommended DkML installer**, you will need to:
 
