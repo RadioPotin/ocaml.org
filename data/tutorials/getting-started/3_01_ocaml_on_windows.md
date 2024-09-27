@@ -87,7 +87,7 @@ opam and the OCaml ecosystem in general require various Unix tools in order to o
 
 How should opam obtain Unix tools?
 > 1. Automatically create an internal Cygwin installation that will be managed by opam (recommended)
-  2. Use Cygwin installation found in C:\Cygwin64
+  2. Use Cygwin installation found in C:\cygwin64
   3. Use MSYS2 installation found in C:\msys64
   4. Use another existing Cygwin/MSYS2 installation
   5. Abort initialisation
@@ -181,16 +181,16 @@ Done.
 # Run for /f "tokens=*" %i in ('opam env --switch=default') do @%i to update the current shell environment
 ```
 
-You can see that in this specific run of the command, opam chose `mingw64` as
-a compiler backend but know that you can very well choose an alternative to it
+You can see that in this specific run of the command, opam chose `mingw` as
+a C compiler but know that you can very well choose an alternative to it
 instead, like `msvc` with the following command:
 
 ```shell-session
 $ opam install system-msvc
 ```
 
-Once your environment has been updated, you will have a fully functional OCaml
-compiler available to you:
+Once your environment has been updated with the given hint, you will have a
+fully functional OCaml compiler available to you:
 
 ```shell-session
 > for /f "tokens=*" %i in ('opam env --switch=default') do @%i
@@ -210,7 +210,7 @@ Hello OCamleers!!
 
 ## DkML
 
-There is a [DkML] Windows installer. However, while [DkML] has a modern OCaml 4.14.0 compiler,
+There is also [DkML] Windows installer. However, while [DkML] has a modern OCaml 4.14.0 compiler,
 it does not track the latest OCaml compilers. We will officially support Windows as a Tier 1
 platform with a [major release of opam](#opam-22) in the coming months, and it will be compatible with
 DkML installations.
